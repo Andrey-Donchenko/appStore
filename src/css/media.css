@@ -1,0 +1,31 @@
+@media (max-width: 767px) {
+	.navbar-form {
+	    width: auto;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    border: none;
+	}
+	.navbar-left {
+	    float: left!important;
+	}
+	.navbar {
+	    margin-bottom: 20px;
+	}
+}
+@media (max-width: 612px) {
+	.product-img {
+	    width: 100px;
+	    height: 100px;
+	}
+	thead th {
+	    font-size: 14px;
+	}
+	tbody th {
+	    font-size: 12px;
+	}
+}
+@media (max-width: 480px) {
+	.product-photo {
+		display: none;
+	}
+}

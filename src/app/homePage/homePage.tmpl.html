@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search" ng-model="vm.query.filter">
+			</div>
+		</form>
+		<button class="btn btn-primary navbar-btn cart-btn" ui-sref="cart" ng-disabled="!vm.storeData.count">
+			<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+			&nbsp
+			<span class="badge">{{vm.storeData.count}}</span>
+		</button>
+	</div>
+</nav>
+<div class="container">	
+	<table class="table table-bordered">
+		<caption>
+			<h3 class="text-center">Goods</h3>
+		</caption>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th class="product-photo">&nbsp</th>
+				<th>Title</th>
+				<th>Unit price amount</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.data | filter : vm.query.filter">
+				<th scope="row">{{$index+1}}</th>
+				<th class="product-photo">
+					<div class="center-block product-img">
+						<img class="img-responsive" src="{{item.img}}" alt="">
+					</div>
+				</th>
+				<th>{{item.title}}</th>
+				<th title="{{vm.checkDiscount(item)}}">
+					<span>{{item.price}}</span>
+					<span ng-show="item.discount.isDiscount">*</span>
+				</th>
+				<th>
+					<button class="btn btn-success in-cart" ng-hide="vm.storeData.selected[item.id]" ng-click="vm.clickItem(item.id)">Add to cart</button>
+					<button class="btn btn-warning" ng-show="vm.storeData.selected[item.id]" ng-click="vm.clickItem(item.id)">Extract from cart</button>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</div>

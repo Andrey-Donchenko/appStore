@@ -1,0 +1,30 @@
+.navbar {
+    margin-bottom: 50px;
+}
+caption>h3 {
+    margin: 0;
+}
+thead th {
+    font-size: 16px;
+}
+th, td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.product-img {
+    width: 150px;
+    height: 150px;
+}
+.cart-btn {
+    float: right;
+}
+.cart-btn :first-child {
+    color: yellow;
+    font-size: 16px;
+}
+.in-cart {
+    width: 129px;
+}
+input[type=number] {
+    width: 50px;
+}

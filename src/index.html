@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>appStore</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- build:css css/libs.css -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<!-- endbuild -->
+	
+	<!-- build:css css/styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!-- endbuild -->
+	<link rel="icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+		<ui-view></ui-view>
+
+	<!-- build:js js/libs.js -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- endbuild -->
+	
+	<!-- build:js -->
+	<script src="app/app.module.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="app/homePage/homePage.component.js"></script>
+	<script src="app/cartPage/cartPage.component.js"></script>
+	<script src="app/services/Data.service.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
